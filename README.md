@@ -4,8 +4,8 @@
 Company needs documentation that salaried people did or did not get overtime each week. 
 
 ## Models and tables we will use:   
-* Post: date:date rationale:text
 * User: devise
+* Post: date:date rationale:text
 * AdminUser: devise 
 
 ## Features:   
