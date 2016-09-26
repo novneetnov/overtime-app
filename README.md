@@ -6,7 +6,7 @@ Company needs documentation that salaried people did or did not get overtime eac
 ## Models and tables we will use:   
 * User: devise (x)
 * Post: date:date rationale:text
-* AdminUser: devise 
+* AdminUser: devise - STI (x) 
 
 ## Features:   
 * Approval workflow: Admin Users will be able to approve or reject the overtime Posts created by Employee Users
