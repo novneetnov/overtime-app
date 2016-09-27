@@ -21,3 +21,7 @@ Company needs documentation that salaried people did or did not get overtime eac
 * Twillio: For SMS sending
 * Administrate: For Admin Users
 * RSpec & Capybara: For unit and integration Testing
+
+
+## Refractor TODOS:   
+- Refractor user association integration test in post_spec
