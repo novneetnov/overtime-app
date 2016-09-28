@@ -5,7 +5,7 @@ Company needs documentation that salaried people did or did not get overtime eac
 
 ## Models and tables we will use:   
 * User: devise (x)
-* Post: date:date rationale:text
+* Post: date:date rationale:text (x)
 * AdminUser: devise - STI (x) 
 
 ## Features:   
