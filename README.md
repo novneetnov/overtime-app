@@ -24,4 +24,5 @@ Company needs documentation that salaried people did or did not get overtime eac
 
 
 ## Refractor TODOS:   
+- Add full_name method for users
 - Refractor user association integration test in post_spec
