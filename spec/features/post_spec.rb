@@ -37,26 +37,36 @@ describe 'Post' do
 		it 'can be created from new form page' do
 			fill_in 'post[date]', with: Date.today
 			fill_in 'post[rationale]', with: "Some Rationale"
-			click_on 'Save'
+			click_on 'Create'
 			expect(page).to have_content("Some Rationale")
 		end
 
 		it 'will have a user associated with it' do
 			fill_in 'post[date]', with: Date.today
 			fill_in 'post[rationale]', with: "User Association"
-			click_on 'Save'
+			click_on 'Create'
 			expect(@user.posts.last.rationale).to eq("User Association")
 		end
 	end
 
-	#describe 'edit' do
-		#it 'can be reached by clicking edit on index page' do
-			#post = FactoryGirl.create(:post, user_id: @user.id)
-			#visit post_path
+	describe 'edit' do
+		before do
+			@post = FactoryGirl.create(:post, user_id: @user.id)
+		end
+		it 'can be reached by clicking edit on index page' do
+			visit posts_path
+			
+			click_on "edit_#{@post.id}"
+			expect(page.status_code).to eq(200)
+		end
 
-			#click_on "Edit"
-			#expect(page.status_code).to eq(200)
-		#end
-	#end
+		it 'can be edited' do
+			visit edit_post_path(@post)
+			fill_in 'post[date]', with: Date.today
+			fill_in 'post[rationale]', with: "Edited Rationale"
+			click_on 'Update'
+			expect(page).to have_content("Edited Rationale")
+		end
+	end
 
 end
