@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Post' do
 	before do
-		@user = User.create(email: "test@test.com", password: "password", password_confirmation: "password", first_name: "Jon", last_name: "Snow")
+		@user = FactoryGirl.create(:user)
 		login_as(@user, :scope => :user)
 	end
 
@@ -19,10 +19,10 @@ describe 'Post' do
 		end
 
 		it 'has a list of Posts' do
-			post1 = Post.create(date: Date.today, rationale: "Post1", user_id: @user.id)
-			post2 = Post.create(date: Date.today, rationale: "Post2", user_id: @user.id)
+			post1 = FactoryGirl.build_stubbed(:post, user_id: @user.id)
+			post2 = FactoryGirl.build_stubbed(:second_post, user_id: @user.id)
 			visit posts_path
-			expect(page).to have_content(/Post1|Post2/)
+			expect(page).to have_content(/Rationale|Content/)
 		end
 	end
 
@@ -48,4 +48,15 @@ describe 'Post' do
 			expect(@user.posts.last.rationale).to eq("User Association")
 		end
 	end
+
+	#describe 'edit' do
+		#it 'can be reached by clicking edit on index page' do
+			#post = FactoryGirl.create(:post, user_id: @user.id)
+			#visit post_path
+
+			#click_on "Edit"
+			#expect(page.status_code).to eq(200)
+		#end
+	#end
+
 end
