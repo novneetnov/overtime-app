@@ -26,7 +26,17 @@ describe 'Post' do
 		end
 	end
 
-	describe 'Creation' do
+	describe 'new' do
+		it 'has a link to create post from navbar' do
+			visit root_path
+			within "ul.nav" do
+				click_link("Add New Entry")
+			end
+			expect(current_path).to eq new_post_path
+		end
+	end
+
+	describe 'creation' do
 		before do
 			visit new_post_path
 		end
