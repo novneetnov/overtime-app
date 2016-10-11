@@ -65,8 +65,9 @@ describe 'Post' do
 		end
 		it 'can be reached by clicking edit on index page' do
 			visit posts_path
-			
-			click_on "edit_#{@post.id}"
+			within "#post_#{@post.id}" do
+				click_on "Edit"
+			end
 			expect(page.status_code).to eq(200)
 		end
 
@@ -76,6 +77,18 @@ describe 'Post' do
 			fill_in 'post[rationale]', with: "Edited Rationale"
 			click_on 'Update'
 			expect(page).to have_content("Edited Rationale")
+		end
+	end
+
+	describe Post do
+		it 'can be deleted' do
+			@post = FactoryGirl.create(:post, user_id: @user.id)
+			visit posts_path
+			within "#post_#{@post.id}" do
+				click_link("Delete")
+			end
+			expect(current_path).to eq posts_path
+			expect(page).to_not have_content(@post.rationale)
 		end
 	end
 
