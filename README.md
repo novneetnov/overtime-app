@@ -9,6 +9,7 @@ Company needs documentation that salaried people did or did not get overtime eac
 * AdminUser: devise - STI (x) 
 
 ## Features:   
+* (x) Users should not be able to Sign Up, as this is an internal app for an organization. Only their users are allowed to log in. Customize devise to achieve this.
 * Approval workflow: Admin Users will be able to approve or reject the overtime Posts created by Employee Users
 * SMS Sending: With link to Approval of overtime input
 * Administrate Admin Dashboard
@@ -25,4 +26,4 @@ Company needs documentation that salaried people did or did not get overtime eac
 
 ## Refractor TODOS:   
 - Add full_name method for users (x)
-- Refractor user association integration test in post_spec
+- Refractor user association integration test in post_spec (x)
