@@ -8,23 +8,23 @@ class UserDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    posts: Field::HasMany,
-    id: Field::Number,
+    posts: Field::HasMany.with_options(searchable: false),
+    id: Field::Number.with_options(searchable: false),
     email: Field::String,
-    password: Field::String,
-    reset_password_token: Field::String,
-    reset_password_sent_at: Field::DateTime,
-    remember_created_at: Field::DateTime,
-    sign_in_count: Field::Number,
-    current_sign_in_at: Field::DateTime,
-    last_sign_in_at: Field::DateTime,
+    password: Field::String.with_options(searchable: false),
+    reset_password_token: Field::String.with_options(searchable: false),
+    reset_password_sent_at: Field::DateTime.with_options(searchable: false),
+    remember_created_at: Field::DateTime.with_options(searchable: false),
+    sign_in_count: Field::Number.with_options(searchable: false),
+    current_sign_in_at: Field::DateTime.with_options(searchable: false),
+    last_sign_in_at: Field::DateTime.with_options(searchable: false),
     current_sign_in_ip: Field::String.with_options(searchable: false),
     last_sign_in_ip: Field::String.with_options(searchable: false),
     first_name: Field::String,
     last_name: Field::String,
-    type: Field::String,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    type: Field::String.with_options(searchable: false),
+    created_at: Field::DateTime.with_options(searchable: false),
+    updated_at: Field::DateTime.with_options(searchable: false),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -34,7 +34,6 @@ class UserDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :posts,
-    :id,
     :email,
     :type,
   ].freeze
