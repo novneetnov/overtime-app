@@ -13,6 +13,7 @@ Company needs documentation that salaried people did or did not get overtime eac
 * Approval workflow: Admin Users will be able to approve or reject the overtime Posts created by Employee Users
 * SMS Sending: With link to Approval of overtime input
 * Administrate Admin Dashboard
+* Block non admin and guest users
 * Email Summary to admin Users(aka managers) for approval
 * Needs to be documented if employee did not do overtime.   
 

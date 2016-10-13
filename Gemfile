@@ -14,6 +14,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'bootstrap-sass'
 gem "gritter", "1.2.0"
+gem "administrate"
+gem 'bourbon'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.0'
