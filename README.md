@@ -12,8 +12,8 @@ Company needs documentation that salaried people did or did not get overtime eac
 * (x) Users should not be able to Sign Up, as this is an internal app for an organization. Only their users are allowed to log in. Customize devise to achieve this.
 * Approval workflow: Admin Users will be able to approve or reject the overtime Posts created by Employee Users
 * SMS Sending: With link to Approval of overtime input
-* Administrate Admin Dashboard
-* Block non admin and guest users
+* (x) Administrate Admin Dashboard
+* (x) Block non admin and guest users
 * Email Summary to admin Users(aka managers) for approval
 * Needs to be documented if employee did not do overtime.   
 
