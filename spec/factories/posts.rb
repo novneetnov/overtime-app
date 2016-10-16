@@ -2,11 +2,16 @@ FactoryGirl.define do
 	factory :post do
 		date Date.today
 		rationale "Some Rationale"
-		user
+		#user
 	end
 	factory :second_post, class: "Post" do
 		date Date.yesterday
 		rationale "Some more Content"
-		user
+		#user
+	end
+	factory :post_with_user, class: "Post" do
+		date Date.yesterday
+		rationale "Some more Content"
+		#user FactoryGirl.create(:user)
 	end
 end

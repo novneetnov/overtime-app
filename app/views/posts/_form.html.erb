@@ -21,6 +21,16 @@
 		</div>
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
+				<%= f.radio_button :status, "submitted" %>
+				<%= f.label :status_submitted, "Submitted" %>
+				<%= f.radio_button :status, "approved" %>
+				<%= f.label :status_approved, "Approved" %>
+				<%= f.radio_button :status, "rejected" %>
+				<%= f.label :status_rejected, "Rejected" %>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
 				<%= f.submit class: "btn btn-primary" %>
 			</div>
 		</div>
