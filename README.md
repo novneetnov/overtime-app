@@ -36,5 +36,5 @@ User submits a post. The *state* is *submitted*
 - Case 2: The Admin rejects it. The *state* is rejected. The User gets to edit his post again.
 
 <strong>ToDO:</strong>   
-	- Add a status/state to Post.
+	- (x) Add a status/state to Post.
 	- 
