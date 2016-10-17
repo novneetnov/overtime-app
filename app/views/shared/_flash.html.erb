@@ -1,0 +1,7 @@
+<% flash.each do |name, msg| -%>
+	<% if not name == "alert"  %>
+		<%= js add_gritter(flash[name], title: "Overtime App Notification", sticky: false, time: 5000, image: name) %>
+	<% else %>
+		<%= js add_gritter(flash[name], title: "Overtime App Notification", sticky: false, time: 5000, image: :warning) %>
+	<% end %>
+<% end %>

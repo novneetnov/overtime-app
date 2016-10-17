@@ -15,7 +15,7 @@ module Admin
     def authenticate_admin
       # TODO Add authentication logic here.
 			unless Admin.admin_types.include? current_user.type
-				flash[:notice] = "You are not authorized to access this page"
+				flash[:warning] = "You are not authorized to access this page"
 				redirect_to root_path
 			end
     end
