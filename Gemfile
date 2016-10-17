@@ -16,6 +16,7 @@ gem 'bootstrap-sass'
 gem "gritter", "1.2.0"
 gem "administrate"
 gem 'bourbon'
+gem 'pundit', '~> 1.1'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.0'
