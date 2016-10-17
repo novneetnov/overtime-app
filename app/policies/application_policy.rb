@@ -1,6 +1,10 @@
 class ApplicationPolicy
   attr_reader :user, :record
 
+	def admin_types
+		["AdminUser"]
+	end
+
   def initialize(user, record)
     @user = user
     @record = record
