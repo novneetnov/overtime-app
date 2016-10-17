@@ -8,7 +8,7 @@ feature 'navigate' do
 
 	feature 'Post' do
 		before do
-			@post = FactoryGirl.create(:post)
+			@post = FactoryGirl.create(:post, user_id: admin.id)
 			visit edit_post_path(@post)
 		end
 

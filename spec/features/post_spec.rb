@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Post' do
+describe 'navigate' do
 	before do
 		@user = FactoryGirl.create(:user)
 		login_as(@user, :scope => :user)
@@ -23,6 +23,14 @@ describe 'Post' do
 			post2 = FactoryGirl.build_stubbed(:second_post, user_id: @user.id)
 			visit posts_path
 			expect(page).to have_content(/Rationale|Content/)
+		end
+
+		it 'has a scope that Users can see only their own posts' do
+			post1 = FactoryGirl.create(:post, user_id: @user.id)
+			post2 = FactoryGirl.create(:second_post, user_id: @user.id)
+			post_with_another_user = FactoryGirl.create(:post_with_user)
+			visit posts_path
+		 	expect(page).to_not have_content(post_with_another_user.rationale)
 		end
 	end
 
@@ -59,7 +67,7 @@ describe 'Post' do
 		end
 	end
 
-	describe 'edit' do
+	describe 'Post' do
 		before do
 			@post = FactoryGirl.create(:post, user_id: @user.id)
 		end
