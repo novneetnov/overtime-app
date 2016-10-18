@@ -1,9 +1,15 @@
 require 'rails_helper'
 
 describe 'navigate' do
+	
+	let!(:user) { FactoryGirl.create(:user) }
+	let!(:post) { FactoryGirl.create(:post, user_id: user.id) }
+	let(:second_post) { FactoryGirl.create(:second_post, user_id: user.id) }
+	let(:post_with_another_user) { FactoryGirl.create(:post_with_user) }
+	let(:second_user) { FactoryGirl.create(:second_user) }
+
 	before do
-		@user = FactoryGirl.create(:user)
-		login_as(@user, :scope => :user)
+		login_as(user, :scope => :user)
 	end
 
 	describe 'index' do
@@ -19,16 +25,11 @@ describe 'navigate' do
 		end
 
 		it 'has a list of Posts' do
-			post1 = FactoryGirl.build_stubbed(:post, user_id: @user.id)
-			post2 = FactoryGirl.build_stubbed(:second_post, user_id: @user.id)
 			visit posts_path
 			expect(page).to have_content(/Rationale|Content/)
 		end
 
 		it 'has a scope that Users can see only their own posts' do
-			post1 = FactoryGirl.create(:post, user_id: @user.id)
-			post2 = FactoryGirl.create(:second_post, user_id: @user.id)
-			post_with_another_user = FactoryGirl.create(:post_with_user)
 			visit posts_path
 		 	expect(page).to_not have_content(post_with_another_user.rationale)
 		end
@@ -63,17 +64,14 @@ describe 'navigate' do
 			fill_in 'post[date]', with: Date.today
 			fill_in 'post[rationale]', with: "User Association"
 			click_on 'Create'
-			expect(@user.posts.last.rationale).to eq("User Association")
+			expect(user.posts.last.rationale).to eq("User Association")
 		end
 	end
 
 	describe 'Post' do
-		before do
-			@post = FactoryGirl.create(:post, user_id: @user.id)
-		end
-		
+
 		it 'can be edited' do
-			visit edit_post_path(@post)
+			visit edit_post_path(post)
 			fill_in 'post[date]', with: Date.today
 			fill_in 'post[rationale]', with: "Edited Rationale"
 			click_on 'Update'
@@ -82,23 +80,21 @@ describe 'navigate' do
 
 		it 'cannot be edited by a non authorized user' do
 			logout :user
-			user2 = FactoryGirl.create(:second_user)
-			login_as(user2, scope: :user)	
+			login_as(second_user, scope: :user)	
 			
-			visit edit_post_path(@post)
+			visit edit_post_path(post)
 			expect(current_path).to eq root_path
 		end
 	end
 
 	describe Post do
 		it 'can be deleted' do
-			@post = FactoryGirl.create(:post, user_id: @user.id)
 			visit posts_path
-			within "#post_#{@post.id}" do
+			within "#post_#{post.id}" do
 				click_link("Delete")
 			end
 			expect(current_path).to eq posts_path
-			expect(page).to_not have_content(@post.rationale)
+			expect(page).to_not have_content(post.rationale)
 		end
 	end
 
