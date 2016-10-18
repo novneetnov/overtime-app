@@ -1,0 +1,70 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddStatusToPosts	db/migrate/20161014114610_add_status_to_posts.rb	/^class AddStatusToPosts < ActiveRecord::Migration$/;"	c
+AddUserToPosts	db/migrate/20160927193032_add_user_to_posts.rb	/^class AddUserToPosts < ActiveRecord::Migration$/;"	c
+Admin	app/controllers/admin/admin_users_controller.rb	/^module Admin$/;"	m
+Admin	app/controllers/admin/application_controller.rb	/^module Admin$/;"	m
+Admin	app/controllers/admin/posts_controller.rb	/^module Admin$/;"	m
+Admin	app/controllers/admin/users_controller.rb	/^module Admin$/;"	m
+AdminUser	app/models/admin_user.rb	/^class AdminUser < User$/;"	c
+AdminUserDashboard	app/dashboards/admin_user_dashboard.rb	/^class AdminUserDashboard < Administrate::BaseDashboard$/;"	c
+AdminUsersController	app/controllers/admin/admin_users_controller.rb	/^  class AdminUsersController < Admin::ApplicationController$/;"	c	class:Admin
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Overtime
+ApplicationController	app/controllers/admin/application_controller.rb	/^  class ApplicationController < Administrate::ApplicationController$/;"	c	class:Admin
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationPolicy	app/policies/application_policy.rb	/^class ApplicationPolicy$/;"	c
+CreatePosts	db/migrate/20160927081859_create_posts.rb	/^class CreatePosts < ActiveRecord::Migration$/;"	c
+DeviseCreateUsers	db/migrate/20160926120048_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration$/;"	c
+Overtime	config/application.rb	/^module Overtime$/;"	m
+Post	app/models/post.rb	/^class Post < ActiveRecord::Base$/;"	c
+PostDashboard	app/dashboards/post_dashboard.rb	/^class PostDashboard < Administrate::BaseDashboard$/;"	c
+PostPolicy	app/policies/post_policy.rb	/^class PostPolicy < ApplicationPolicy$/;"	c
+PostsController	app/controllers/admin/posts_controller.rb	/^  class PostsController < Admin::ApplicationController$/;"	c	class:Admin
+PostsController	app/controllers/posts_controller.rb	/^class PostsController < ApplicationController$/;"	c
+PostsHelper	app/helpers/posts_helper.rb	/^module PostsHelper$/;"	m
+Scope	app/policies/application_policy.rb	/^  class Scope$/;"	c	class:ApplicationPolicy
+StaticController	app/controllers/static_controller.rb	/^class StaticController < ApplicationController$/;"	c
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UserDashboard	app/dashboards/user_dashboard.rb	/^class UserDashboard < Administrate::BaseDashboard$/;"	c
+UsersController	app/controllers/admin/users_controller.rb	/^  class UsersController < Admin::ApplicationController$/;"	c	class:Admin
+active?	app/helpers/application_helper.rb	/^	def active?(path)$/;"	f	class:ApplicationHelper
+admin?	app/policies/post_policy.rb	/^	def admin?$/;"	f	class:PostPolicy
+admin_types	app/controllers/admin/application_controller.rb	/^	def self.admin_types$/;"	F	class:Admin
+admin_types	app/policies/application_policy.rb	/^	def admin_types$/;"	f	class:ApplicationPolicy
+authenticate_admin	app/controllers/admin/application_controller.rb	/^    def authenticate_admin$/;"	f	class:Admin.ApplicationController
+change	db/migrate/20160926120048_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20160927081859_create_posts.rb	/^  def change$/;"	f	class:CreatePosts
+change	db/migrate/20160927193032_add_user_to_posts.rb	/^  def change$/;"	f	class:AddUserToPosts
+change	db/migrate/20161014114610_add_status_to_posts.rb	/^  def change$/;"	f	class:AddStatusToPosts
+create	app/controllers/posts_controller.rb	/^	def create$/;"	f	class:PostsController
+create?	app/policies/application_policy.rb	/^  def create?$/;"	f	class:ApplicationPolicy
+destroy	app/controllers/posts_controller.rb	/^	def destroy$/;"	f	class:PostsController
+destroy?	app/policies/application_policy.rb	/^  def destroy?$/;"	f	class:ApplicationPolicy
+edit	app/controllers/posts_controller.rb	/^	def edit$/;"	f	class:PostsController
+edit?	app/policies/application_policy.rb	/^  def edit?$/;"	f	class:ApplicationPolicy
+full_name	app/models/user.rb	/^	def full_name$/;"	f	class:User
+homepage	app/controllers/static_controller.rb	/^	def homepage$/;"	f	class:StaticController
+index	app/controllers/posts_controller.rb	/^	def index$/;"	f	class:PostsController
+index?	app/policies/application_policy.rb	/^  def index?$/;"	f	class:ApplicationPolicy
+initialize	app/policies/application_policy.rb	/^    def initialize(user, scope)$/;"	f	class:ApplicationPolicy.Scope
+initialize	app/policies/application_policy.rb	/^  def initialize(user, record)$/;"	f	class:ApplicationPolicy
+new	app/controllers/posts_controller.rb	/^	def new$/;"	f	class:PostsController
+new?	app/policies/application_policy.rb	/^  def new?$/;"	f	class:ApplicationPolicy
+post_approved?	app/policies/post_policy.rb	/^	def post_approved?$/;"	f	class:PostPolicy
+post_creator?	app/policies/post_policy.rb	/^	def post_creator?$/;"	f	class:PostPolicy
+post_params	app/controllers/posts_controller.rb	/^	def post_params$/;"	f	class:PostsController
+resolve	app/policies/application_policy.rb	/^    def resolve$/;"	f	class:ApplicationPolicy.Scope
+scope	app/policies/application_policy.rb	/^  def scope$/;"	f	class:ApplicationPolicy
+set_post	app/controllers/posts_controller.rb	/^	def set_post$/;"	f	class:PostsController
+show	app/controllers/posts_controller.rb	/^	def show$/;"	f	class:PostsController
+show?	app/policies/application_policy.rb	/^  def show?$/;"	f	class:ApplicationPolicy
+status_label	app/helpers/posts_helper.rb	/^	def status_label(status)$/;"	f	class:PostsHelper
+update	app/controllers/posts_controller.rb	/^	def update$/;"	f	class:PostsController
+update?	app/policies/application_policy.rb	/^  def update?$/;"	f	class:ApplicationPolicy
+update?	app/policies/post_policy.rb	/^	def update?$/;"	f	class:PostPolicy
+user_not_authorized	app/controllers/application_controller.rb	/^	def user_not_authorized$/;"	f	class:ApplicationController
