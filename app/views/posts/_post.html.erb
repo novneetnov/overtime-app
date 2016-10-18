@@ -4,8 +4,10 @@
 	<td><%= post.user.full_name %></td>
 	<td><%= truncate(post.rationale) %></td>
 	<td><%= status_label post.status %></td>
-	<td id="post_<%= post.id %>">
-		<%= link_to 'Edit', edit_post_path(post), class: "btn btn-xs btn-primary" %>
-		<%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: "Are you Sure?" }, class: "btn btn-xs btn-danger" %>
-	</td>
+	<% if policy(post).update? %>
+		<td id="post_<%= post.id %>" >
+			<%= link_to 'Edit', edit_post_path(post), class: "btn btn-xs btn-primary" %>
+			<%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: "Are you Sure?" }, class: "btn btn-xs btn-danger" %>
+		</td>
+	<% end %>
 </tr>
