@@ -37,4 +37,3 @@ User submits a post. The *state* is *submitted*
 
 <strong>ToDO:</strong>   
 	- (x) Add a status/state to Post.
-	- 

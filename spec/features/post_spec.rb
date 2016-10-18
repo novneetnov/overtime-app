@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'navigate' do
+describe 'Post' do
 	
 	let!(:user) { FactoryGirl.create(:user) }
 	let!(:post) { FactoryGirl.create(:post, user_id: user.id) }

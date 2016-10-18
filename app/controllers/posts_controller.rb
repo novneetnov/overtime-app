@@ -25,6 +25,15 @@ class PostsController < ApplicationController
 
 	def edit
 		authorize @post
+
+	# USE THE FOLLOWING FOR CUSTOM FLASH MESSAGES	
+	#		rescue Pundit::NotAuthorizedError
+	#			if not current_user == @post.user
+	#				flash[:warning] = "You are not authorized to perform this action."
+	#			elsif @post.approved?
+	#				flash[:warning] = "The Record is already approved"
+	#			end
+	#			redirect_to root_path
 	end
 
 	def update
