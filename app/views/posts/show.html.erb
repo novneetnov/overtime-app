@@ -1,1 +1,33 @@
-<%= @post.inspect %>
+<div>
+	<h2>Post #<%= @post.id %></h2>
+	<div class="col-md-6 col-sm-8 col-xs-12 well">
+		<dl>
+			<dt>
+				<span>RATIONALE:</span>
+			</dt>
+			<dd>
+				<%= @post.rationale %>
+			</dd>
+			<dt>
+				<span>EMPLOYEE:</span>
+			</dt>
+			<dd>
+				<%= @post.user.full_name %>
+			</dd>
+			<dt>
+				<span>DATE:</span>
+			</dt>
+			<dd>
+				<%= @post.date %>
+			</dd>
+			<dt>
+				<span>APPROVAL STATUS:</span>
+			</dt>
+			<dd>
+				<%= @post.status %>
+			</dd>
+		</dl>
+	</div>
+	<div class="clearfix"></div>
+	<%= link_to "Edit", edit_post_path(@post), class: "btn btn-md btn-primary" if policy(@post).update? %>
+</div>
