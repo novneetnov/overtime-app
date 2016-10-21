@@ -92,7 +92,7 @@ describe 'Post' do
 		it 'can be deleted' do
 			visit posts_path
 			within "#post_#{post.id}" do
-				click_link("Delete")
+				find('a[data-method="delete"]').click
 			end
 			expect(current_path).to eq posts_path
 			expect(page).to_not have_content(post.rationale)

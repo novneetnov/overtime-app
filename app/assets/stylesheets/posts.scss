@@ -33,3 +33,17 @@ dd {
   padding: 0px 0px 10px 0px;
   margin: 0px;
 }
+
+.edit-icon, .delete-icon {
+	font-size: 1.5em;
+}
+
+.edit-icon:hover {
+	text-decoration: none;
+	color: green;
+}
+
+.delete-icon:hover {
+	text-decoration: none;
+	color: #C9302C;
+}
