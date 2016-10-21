@@ -17,6 +17,7 @@ gem "gritter", "1.2.0"
 gem "administrate"
 gem 'bourbon'
 gem 'pundit', '~> 1.1'
+gem 'puma'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.0'
