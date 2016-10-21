@@ -56,13 +56,14 @@ describe 'Post' do
 		it 'can be created from new form page' do
 			fill_in 'post[date]', with: Date.today
 			fill_in 'post[rationale]', with: "Some Rationale"
-			click_on 'Create'
-			expect(page).to have_content("Some Rationale")
+			fill_in 'post[overtime_request]', with: 4.5
+			expect{ click_on 'Create' }.to change(Post, :count).by 1
 		end
 
 		it 'will have a user associated with it' do
 			fill_in 'post[date]', with: Date.today
 			fill_in 'post[rationale]', with: "User Association"
+			fill_in 'post[overtime_request]', with: 4.5
 			click_on 'Create'
 			expect(user.posts.last.rationale).to eq("User Association")
 		end
