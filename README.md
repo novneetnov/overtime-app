@@ -7,6 +7,7 @@ Company needs documentation that salaried people did or did not get overtime eac
 * User: devise (x)
 * Post: date:date rationale:text (x)
 * AdminUser: devise - STI (x) 
+* AuditLog: To document if employee logs in overtime or not.
 
 ## Features:   
 * (x) Users should not be able to Sign Up, as this is an internal app for an organization. Only their users are allowed to log in. Customize devise to achieve this.
@@ -26,14 +27,14 @@ Company needs documentation that salaried people did or did not get overtime eac
 
 
 ## Refractor TODOS:   
-- Add full_name method for users (x)
-- Refractor user association integration test in post_spec (x)
-- Refactor posts/form for admin user with status.
+- (x) Add full_name method for users
+- (x) Refractor user association integration test in post_spec
+- (x) Refactor posts/form for admin user with status.
 
 ## The Approval workflow:  
 User submits a post. The *state* is *submitted*    
-- Case 1: The Admin approves it. The *state* is locked.
-- Case 2: The Admin rejects it. The *state* is rejected. The User gets to edit his post again.
+- (x) Case 1: The Admin approves it. The *state* is locked.
+- (x) Case 2: The Admin rejects it. The *state* is rejected. The User gets to edit his post again.
 
 <strong>ToDO:</strong>   
 	- (x) Add a status/state to Post.

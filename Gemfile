@@ -18,6 +18,7 @@ gem "administrate"
 gem 'bourbon'
 gem 'pundit', '~> 1.1'
 gem 'puma'
+gem 'twilio-ruby', '~> 4.13'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.0'
