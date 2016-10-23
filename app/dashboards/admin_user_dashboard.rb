@@ -11,6 +11,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
     posts: Field::HasMany.with_options(searchable: false),
     id: Field::Number.with_options(searchable: false),
     email: Field::String,
+	phone: Field::String,
     password: Field::String.with_options(searchable: false),
     reset_password_token: Field::String.with_options(searchable: false),
     reset_password_sent_at: Field::DateTime.with_options(searchable: false),
@@ -35,6 +36,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :posts,
     :email,
+	:phone
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -42,6 +44,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :posts,
     :email,
+	:phone,
     :remember_created_at,
     :sign_in_count,
     :current_sign_in_at,
@@ -63,6 +66,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
     :password,
     :first_name,
     :last_name,
+	:phone
   ].freeze
 
   # Overwrite this method to customize how admin users are displayed

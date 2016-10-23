@@ -11,6 +11,7 @@ FactoryGirl.define do
 		email "user1@test.com"
 		password "password"
 		password_confirmation "password"
+		phone "1234567890"
 	end
 
 	factory :admin_user, class: "AdminUser" do
@@ -19,6 +20,7 @@ FactoryGirl.define do
 		email "admin@test.com"
 		password "password"
 		password_confirmation "password"
+		phone "5555555555"
 	end
 
 	factory :second_user, class: "User" do
@@ -27,6 +29,7 @@ FactoryGirl.define do
 		email "user2@test.com"
 		password "password"
 		password_confirmation "password"
+		phone "9876543210"
 	end
 
 end

@@ -11,6 +11,7 @@ class UserDashboard < Administrate::BaseDashboard
     posts: Field::HasMany.with_options(searchable: false),
     id: Field::Number.with_options(searchable: false),
     email: Field::String,
+    phone: Field::String,
     password: Field::String.with_options(searchable: false),
     reset_password_token: Field::String.with_options(searchable: false),
     reset_password_sent_at: Field::DateTime.with_options(searchable: false),
@@ -36,6 +37,7 @@ class UserDashboard < Administrate::BaseDashboard
     :posts,
     :email,
     :type,
+	:phone
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -44,6 +46,7 @@ class UserDashboard < Administrate::BaseDashboard
     :posts,
     :id,
     :email,
+	:phone,
     :sign_in_count,
     :current_sign_in_at,
     :last_sign_in_at,
@@ -64,6 +67,7 @@ class UserDashboard < Administrate::BaseDashboard
     :password,
     :first_name,
     :last_name,
+	:phone
   ].freeze
 
   # Overwrite this method to customize how users are displayed
