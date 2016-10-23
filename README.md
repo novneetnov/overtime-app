@@ -4,9 +4,9 @@
 Company needs documentation that salaried people did or did not get overtime each week. 
 
 ## Models and tables we will use:   
-* User: devise (x)
-* Post: date:date rationale:text (x)
-* AdminUser: devise - STI (x) 
+* (x) User: devise
+* (x) Post: date:date rationale:text
+* (x) AdminUser: devise - STI
 * AuditLog: To document if employee logs in overtime or not.
 
 ## Features:   
