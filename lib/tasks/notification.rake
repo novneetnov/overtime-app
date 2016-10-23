@@ -9,9 +9,6 @@ namespace :notification do
 		#User.all.each do |user|
 			#SmsTool.send_sms()
 		#end
-		# No spaces or dashes
-		# Length exactly equal to 10 chars
-		# All chars will be number
-  end
+	end
 
 end
