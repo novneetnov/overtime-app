@@ -36,5 +36,14 @@ User submits a post. The *state* is *submitted*
 - (x) Case 1: The Admin approves it. The *state* is locked.
 - (x) Case 2: The Admin rejects it. The *state* is rejected. The User gets to edit his post again.
 
+## The Audit Log:  
+Keep track if an employee had overtime or not.
+Dependencies:  
+	- User
+Attr:
+	- Status:int (enum) -> [ Pending, Complete ]
+	- start_date:date -> default previous Monday
+	- date_verified
+
 <strong>ToDO:</strong>   
 	- (x) Add a status/state to Post.
