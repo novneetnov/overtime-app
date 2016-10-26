@@ -15,12 +15,16 @@ describe AuditLog do
 
 		it 'renders audit log content' do
 			visit audit_logs_path
-			debugger
 			expect(page).to have_content(audit_log.user.full_name) 
 		end
 
-		xit 'cannot be accessed by non-admin user' do
+		it 'cannot be accessed by non-admin user' do
+			logout(:user)
+			user = audit_log.user
+			login_as(user, scope: :user)
 			
+			visit audit_logs_path
+			expect(current_path).to eq root_path
 		end
 	end
 end
