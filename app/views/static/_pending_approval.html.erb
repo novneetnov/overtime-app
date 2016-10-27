@@ -1,0 +1,24 @@
+<% pending_approvals.each do |pending_approval| %>
+	<div class="col-md-4">
+		<div class="homepage-block">
+			<h4>
+				<%= pending_approval.user.full_name %>
+			</h4>
+			<p><span class="pending-details">Date Submitted:</span> <%= pending_approval.date %></p>
+			<p><span class="pending-details">Overtime:</span> <%= pending_approval.overtime_request %> hours</p>
+			<p>
+				<span class="pending-details">Rationale:</span> 
+				<%= truncate(pending_approval.rationale, length: 62) %>
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<%= link_to "Approve", root_path, class: "btn btn-success btn-block" %>
+				</div>
+				<div class="col-md-6">
+					<%= link_to "Review", root_path, class: "btn btn-warning btn-block" %>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+
