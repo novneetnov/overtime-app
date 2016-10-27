@@ -28,7 +28,7 @@
 			</div>
 		</div>
 
-		<%= render partial: 'status', locals: { f: f} if current_user.type == 'AdminUser' %>
+		<%= render partial: 'status', locals: { f: f} if admin_types.include? current_user.type %>
 
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">

@@ -21,7 +21,7 @@
 		<li class="dropdown pull-right">
 			<a href="#" data-toggle="dropdown" class="dropdown-toggle">Options<strong class="caret"></strong></a>
 			<ul class="dropdown-menu">
-				<% if current_user.type == "AdminUser" %>
+				<% if admin_types.include? current_user.type %>
 					<li>
 						<%= link_to "Admin Dashboard", admin_root_path %>
 					</li>
