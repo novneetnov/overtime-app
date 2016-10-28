@@ -23,20 +23,24 @@ puts "1 User created"
 
 puts "1 Admin User Created"
 
-100.times do |post|
+3.times do |n|
 	Post.create!(
-		date: Date.today, 
+		date: Date.today - (7*n).days, 
 		#rationale: "#{post} rationale content", 
 		rationale: "Ipsum praesentium adipisci dolore tenetur sint alias maiores molestiae sequi nam? Sint nemo architecto cumque reprehenderit natus. Esse nobis quidem vero dignissimos delectus. Earum ab error fugit esse id eum!",
 		user_id: @user.id, 
-		overtime_request: 2.5)
+		overtime_request: 2.5
+	)
 end
 
-100.times do |audit_log|
+puts "3 Posts created"
+
+3.times do |n|
 	AuditLog.create!(
-		user_id: @user.id, 
+		user_id: @user.id,
 		status: 0, 
-		start_date: (Date.today - 6.days)) 
+		start_date: (Date.today - (7*n+6).days)
+	) 
 end
 
-puts "100 AuditLogs have been created."
+puts "3 AuditLogs created."

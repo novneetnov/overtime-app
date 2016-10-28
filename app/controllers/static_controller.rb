@@ -4,7 +4,7 @@ class StaticController < ApplicationController
 			@pending_approvals = Post.includes(:user).submitted
 			@recent_audit_items = AuditLog.includes(:user).last(10)
 		else
-			 #DSB
+			@pending_audit_confirmations = current_user.audit_logs.pending
 		end
 	end
 end

@@ -1,12 +1,20 @@
-<div class="row">
-	<div class="col-md-6">
-		<div class="jumbotron employee-blocks">
-			asdf
+<div class="pending-homepage">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="employee-blocks">
+				<h3>Pending Confirmations</h3>
+				<%= render partial: 'pending_audit_confirmations', 
+										locals: { pending_audit_confirmations: @pending_audit_confirmations } %>
+			</div>
 		</div>
 	</div>
-	<div class="col-md-6">
-		<div class="jumbotron employee-blocks">
-			asdf
+</div>
+<div class="pending-homepage">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="employee-blocks">
+				asdf
+			</div>
 		</div>
 	</div>
 </div>
