@@ -1,6 +1,10 @@
 class StaticController < ApplicationController
 	def homepage
-		@pending_approvals = Post.includes(:user).where(status: "submitted")	
-		@recent_audit_items = AuditLog.last(10)
+		if admin_types.include? current_user.type
+			@pending_approvals = Post.includes(:user).submitted
+			@recent_audit_items = AuditLog.includes(:user).last(10)
+		else
+			 #DSB
+		end
 	end
 end
