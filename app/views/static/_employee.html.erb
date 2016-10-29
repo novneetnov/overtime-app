@@ -1,19 +1,22 @@
+<% unless @pending_audit_confirmations.count.zero?  %>
+	<div class="pending-homepage">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="employee-blocks">
+					<h3>Pending Confirmations</h3>
+					<%= render partial: 'pending_audit_confirmations', 
+											locals: { pending_audit_confirmations: @pending_audit_confirmations } %>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
 <div class="pending-homepage">
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="employee-blocks">
-				<h3>Pending Confirmations</h3>
-				<%= render partial: 'pending_audit_confirmations', 
-										locals: { pending_audit_confirmations: @pending_audit_confirmations } %>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="pending-homepage">
-	<div class="row">
-		<div class="col-md-6">
-			<div class="employee-blocks">
-				asdf
+				<h3>Request Overtime</h3>
+				<%= link_to "Request Overtime Approval", new_post_path, class: "btn btn-primary btn-lg btn-block" %>
 			</div>
 		</div>
 	</div>
