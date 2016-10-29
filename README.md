@@ -11,7 +11,7 @@ Company needs documentation that salaried people did or did not get overtime eac
 
 ## Features:   
 * (x) Users should not be able to Sign Up, as this is an internal app for an organization. Only their users are allowed to log in. Customize devise to achieve this.
-* Approval workflow: Admin Users will be able to approve or reject the overtime Posts created by Employee Users
+* (x) Approval workflow: Admin Users will be able to approve or reject the overtime Posts created by Employee Users
 * SMS Sending: With link to Approval of overtime input
 * (x) Administrate Admin Dashboard
 * (x) Block non admin and guest users
@@ -47,3 +47,5 @@ Attr:
 
 <strong>ToDO:</strong>   
 	- (x) Add a status/state to Post.
+	- Overtime Post should not be submitted for the week if AuditLog has been confirmed saying no overtime was done for that week.
+	- Audit Log status should differentiate between overtime submitted or no overtime for that week. 
