@@ -39,7 +39,7 @@ describe 'Post' do
 		it 'has a link to create post from navbar' do
 			visit root_path
 			within "ul.nav" do
-				click_link("Add New Entry")
+				click_link("Request Overtime")
 			end
 			expect(current_path).to eq new_post_path
 		end

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
 	describe "creation" do
 		before do
-			@post = FactoryGirl.create(:post)
+			@post = FactoryGirl.create(:post_with_user)
 		end
 		it 'can be created' do
 			expect(@post).to be_valid
