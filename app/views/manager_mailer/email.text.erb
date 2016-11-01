@@ -1,8 +1,8 @@
-Hi <%= @manager.full_name %>,
+Hi <%= @manager.first_name + " " + @manager.last_name %>,
 
 There are new overtime request to review. Please click the following link to access them. 
 
-Link: <%= link_to "Reviews Overtime Requests", root_url %>
+Link: <%= root_url %>
 
 From the mailer robot.
 Please do not reply to this email.
