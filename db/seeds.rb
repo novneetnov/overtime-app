@@ -4,7 +4,7 @@ User.delete_all
 #Post.skip_callback(:save, :after, :update_audit_log)
 
 @employee = Employee.create!(
-	email: "employee@example.com", 
+	email: "novneet@iith.ac.in", 
 	password: "password", 
 	password_confirmation: "password", 
 	first_name: "Jon", 
@@ -15,7 +15,7 @@ User.delete_all
 puts "1 User created"
 
 @admin = AdminUser.create!(
-	email: "admin@example.com", 
+	email: "novneet346iith@gmail.com", 
 	password: "password", 
 	password_confirmation: "password", 
 	first_name: "Jon", 
