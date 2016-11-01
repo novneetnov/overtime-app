@@ -3,10 +3,10 @@ module SmsTool
 	auth_token = ENV['TWILIO_AUTH_TOKEN']
 
 	@client = Twilio::REST::Client.new account_sid, auth_token
-	def self.send_sms(number: num, message: msg)
+	def self.send_sms(number: num, message: msg, country_code: code)
 		@client.messages.create(
 			  from: ENV['TWILIO_PHONE_NUMBER'],
-				to: number,
+				to: "+#{country_code}#{number}",
 				body: "#{message}"
 		)
 	end

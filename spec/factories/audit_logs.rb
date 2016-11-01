@@ -16,5 +16,4 @@ FactoryGirl.define do
 		start_date (Date.today - 6.days)
 		end_date nil
 	end
-
 end
