@@ -6,11 +6,17 @@ class Post < ActiveRecord::Base
 
 	scope :posts_by, ->(user) { where(user_id: user.id) }
 
-	after_save :update_audit_log
+	after_save :update_status_of_audit_log
 
 	private
-	def update_audit_log
+	def update_status_of_audit_log
 		audit_log = AuditLog.where(user_id: self.user.id, start_date: (self.date - 7.days..self.date)).last
-		audit_log.confirmed! if audit_log
+		if audit_log
+			audit_log.confirmed! if self.submitted? or self.approved?
+			if self.rejected?
+				audit_log.pending!
+				audit_log.update!(end_date: nil)
+			end
+		end
 	end
 end
