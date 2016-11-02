@@ -18,6 +18,8 @@ Company needs documentation that salaried people did or did not get overtime eac
 * Email Summary to admin Users(aka managers) for approval
 * Needs to be documented if employee did not do overtime.   
 * Create Audit Log for text message.
+* Need to update audit log end date when confirmed by the Employee.
+* Need to update audit log status when an overtime time has been rejected.
 
 ## Gems we will use:   
 * Bootstrap: Basic UI design
@@ -40,13 +42,14 @@ User submits a post. The *state* is *submitted*
 ## The Audit Log:  
 Keep track if an employee had overtime or not.
 Dependencies:  
-	- User
+- User
 Attr:
-	- Status:int (enum) -> [ Pending, Complete ]
-	- start_date:date -> default previous Monday
-	- date_verified
+- Status:int (enum) -> [ Pending, Complete ]
+- start_date:date -> default previous Monday
+- date_verified
 
 <strong>ToDO:</strong>   
-	- (x) Add a status/state to Post.
-	- Overtime Post should not be submitted for the week if AuditLog has been confirmed saying no overtime was done for that week.
-	- Audit Log status should differentiate between overtime submitted or no overtime for that week. 
+- (x) Add a status/state to Post.
+- Overtime Post should not be submitted for the week if AuditLog has been confirmed saying no overtime was done for that week.
+- Audit Log status should differentiate between overtime submitted or no overtime for that week. 
+- Fix bug in navigating to Admin Dashboard.
