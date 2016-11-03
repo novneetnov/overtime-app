@@ -19,7 +19,7 @@ Company needs documentation that salaried people did or did not get overtime eac
 * Needs to be documented if employee did not do overtime.   
 * Create Audit Log for text message.
 * (x) Need to update audit log end date when confirmed by the Employee.
-* Need to update audit log status when an overtime time has been rejected.
+* (x) Need to update audit log status when an overtime time has been rejected.
 
 ## Gems we will use:   
 * Bootstrap: Basic UI design
@@ -33,6 +33,7 @@ Company needs documentation that salaried people did or did not get overtime eac
 - (x) Add full_name method for users
 - (x) Refractor user association integration test in post_spec
 - (x) Refactor posts/form for admin user with status.
+- Refactor Button to look good and not overflow on mobile
 
 ## The Approval workflow:  
 User submits a post. The *state* is *submitted*    
