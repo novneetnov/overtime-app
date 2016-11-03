@@ -37,6 +37,9 @@ describe 'Post' do
 
 	describe 'new' do
 		it 'has a link to create post from navbar' do
+			employee = FactoryGirl.create(:employee)
+			logout(user)
+			login_as(employee, scope: :user)
 			visit root_path
 			within "ul.nav" do
 				click_link("Request Overtime")

@@ -16,6 +16,6 @@ class AuditLog < ActiveRecord::Base
 
 	# When the Audit Logs are run via rake task on Sundays, the start date gets set to the previous Mondays.
 	def set_defaults
-		self.start_date ||= 6.days.ago
+		self.start_date ||= (Date.today - 6.days)
 	end
 end

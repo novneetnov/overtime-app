@@ -14,6 +14,16 @@ FactoryGirl.define do
 		phone "1234567890"
 	end
 
+	factory :employee do
+		first_name "Jon"
+		last_name "Snow"
+		#email { generate :email }
+		email "employee@test.com"
+		password "password"
+		password_confirmation "password"
+		phone "1234567890"
+	end
+
 	factory :admin_user, class: "AdminUser" do
 		first_name "Admin"
 		last_name "User"
