@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class UserDashboard < Administrate::BaseDashboard
+class EmployeeDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -11,7 +11,7 @@ class UserDashboard < Administrate::BaseDashboard
     posts: Field::HasMany.with_options(searchable: false),
     id: Field::Number.with_options(searchable: false),
     email: Field::String,
-    phone: Field::String,
+		phone: Field::String,
     password: Field::String.with_options(searchable: false),
     reset_password_token: Field::String.with_options(searchable: false),
     reset_password_sent_at: Field::DateTime.with_options(searchable: false),
@@ -23,10 +23,7 @@ class UserDashboard < Administrate::BaseDashboard
     last_sign_in_ip: Field::String.with_options(searchable: false),
     first_name: Field::String,
     last_name: Field::String,
-    type: Field::Select.with_options(
-			collection: User.subclasses.map(&:name),
-			searchable: false
-		),
+    type: Field::String.with_options(searchable: false),
     created_at: Field::DateTime.with_options(searchable: false),
     updated_at: Field::DateTime.with_options(searchable: false),
   }.freeze
@@ -39,7 +36,6 @@ class UserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :posts,
     :email,
-    :type,
 		:phone
   ].freeze
 
@@ -47,9 +43,9 @@ class UserDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :posts,
-    :id,
     :email,
 		:phone,
+    :remember_created_at,
     :sign_in_count,
     :current_sign_in_at,
     :last_sign_in_at,
@@ -70,14 +66,13 @@ class UserDashboard < Administrate::BaseDashboard
     :password,
     :first_name,
     :last_name,
-		:phone,
-		:type
+		:phone
   ].freeze
 
-  # Overwrite this method to customize how users are displayed
+  # Overwrite this method to customize how admin users are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(user)
-  #   "User ##{user.id}"
+  # def display_resource(admin_user)
+  #   "AdminUser ##{admin_user.id}"
   # end
 end

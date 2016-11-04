@@ -36,7 +36,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :posts,
     :email,
-	:phone
+		:phone
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -44,7 +44,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :posts,
     :email,
-	:phone,
+		:phone,
     :remember_created_at,
     :sign_in_count,
     :current_sign_in_at,
@@ -66,7 +66,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
     :password,
     :first_name,
     :last_name,
-	:phone
+		:phone
   ].freeze
 
   # Overwrite this method to customize how admin users are displayed

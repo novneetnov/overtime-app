@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 		resources :posts
 		resources :admin_users
     root to: "users#index"
+		resources "employees"
   end
 
   resources :posts
