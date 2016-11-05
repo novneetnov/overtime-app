@@ -176,6 +176,8 @@ GEM
       json (~> 1.4)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    rollbar (2.13.3)
+      multi_json
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
@@ -262,6 +264,7 @@ DEPENDENCIES
   pundit (~> 1.1)
   rails (= 4.2.6)
   rails_12factor
+  rollbar
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
