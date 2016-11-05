@@ -11,6 +11,7 @@ class PostDashboard < Administrate::BaseDashboard
     user: Field::BelongsTo,
     id: Field::Number,
     date: Field::DateTime,
+		overtime_request: Field::Number,
     rationale: Field::Text.with_options(searchable: true),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -28,6 +29,7 @@ class PostDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :user,
     :date,
+		:overtime_request,
     :rationale,
 		:status,
   ].freeze
@@ -38,6 +40,7 @@ class PostDashboard < Administrate::BaseDashboard
     :user,
 		:status,
     :date,
+		:overtime_request,
     :rationale,
     :created_at,
     :updated_at,
@@ -49,6 +52,7 @@ class PostDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :user,
     :date,
+		:overtime_request,
     :rationale,
 		:status,
   ].freeze

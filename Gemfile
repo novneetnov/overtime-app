@@ -21,6 +21,7 @@ gem 'puma'
 gem 'twilio-ruby', '~> 4.13'
 gem 'kaminari'
 gem 'rollbar'
+gem 'newrelic_rpm'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.0'
