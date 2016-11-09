@@ -1,9 +1,7 @@
 <tr class="clickable-row" role="link" data-link="<%= post_path(post) %>">
-	<td><%= post.id %></td>
 	<td><%= post.overtime_request %></td>
 	<td><%= post.date %></td>
-	<td><%= post.user.full_name %></td>
-	<td><%= link_to truncate(post.rationale), post %></td>
+	<td class="hidden-xs"><%= link_to truncate(post.rationale), post %></td>
 	<td><%= status_label post.status %></td>
 	<% if policy(post).update? %>
 		<td id="post_<%= post.id %>" >
