@@ -9,7 +9,9 @@ User.delete_all
 	password_confirmation: "password", 
 	first_name: "Jon", 
 	last_name: "Snow",
-	phone: "7894418310"
+	phone: "7894418310",
+	ssn: 1234,
+	company: "ABC"
 )
 
 puts "1 User created"
@@ -20,7 +22,9 @@ puts "1 User created"
 	password_confirmation: "password", 
 	first_name: "Jon", 
 	last_name: "Snow",
-	phone: "9438405083" 
+	phone: "9438405083",
+	ssn: 1234,
+	company: "ABC"
 )
 
 puts "1 Admin User Created"

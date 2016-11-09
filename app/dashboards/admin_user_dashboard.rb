@@ -12,6 +12,8 @@ class AdminUserDashboard < Administrate::BaseDashboard
     id: Field::Number.with_options(searchable: false),
     email: Field::String,
 		phone: Field::String,
+		ssn: Field::Number,
+		company: Field::String,
     password: Field::String.with_options(searchable: false),
     reset_password_token: Field::String.with_options(searchable: false),
     reset_password_sent_at: Field::DateTime.with_options(searchable: false),
@@ -36,13 +38,16 @@ class AdminUserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :posts,
     :email,
-		:phone
+		:phone,
+		:ssn
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :posts,
+		:ssn,
+		:company,
     :email,
 		:phone,
     :remember_created_at,
@@ -62,11 +67,13 @@ class AdminUserDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+		:ssn,
     :email,
     :password,
     :first_name,
     :last_name,
-		:phone
+		:phone,
+		:company
   ].freeze
 
   # Overwrite this method to customize how admin users are displayed

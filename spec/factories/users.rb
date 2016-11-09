@@ -12,6 +12,8 @@ FactoryGirl.define do
 		password "password"
 		password_confirmation "password"
 		phone "1234567890"
+		ssn 1234
+		company "ABC"
 	end
 
 	factory :employee do
@@ -22,6 +24,8 @@ FactoryGirl.define do
 		password "password"
 		password_confirmation "password"
 		phone "1234567890"
+		ssn 1234
+		company "ABC"
 	end
 
 	factory :admin_user, class: "AdminUser" do
@@ -31,6 +35,8 @@ FactoryGirl.define do
 		password "password"
 		password_confirmation "password"
 		phone "5555555555"
+		ssn 1234
+		company "ABC"
 	end
 
 	factory :second_user, class: "User" do
@@ -40,6 +46,8 @@ FactoryGirl.define do
 		password "password"
 		password_confirmation "password"
 		phone "9876543210"
+		ssn 1234
+		company "ABC"
 	end
 
 end
