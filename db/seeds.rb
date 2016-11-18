@@ -45,7 +45,7 @@ puts "4 AuditLogs created."
 		#rationale: "#{post} rationale content", 
 		rationale: "Ipsum praesentium adipisci dolore tenetur sint alias maiores molestiae sequi nam? Sint nemo architecto cumque reprehenderit natus. Esse nobis quidem vero dignissimos delectus. Earum ab error fugit esse id eum!",
 		user_id: @employee.id, 
-		overtime_request: 2.5
+		daily_hours: 2.5
 	)
 end
 

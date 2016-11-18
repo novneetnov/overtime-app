@@ -1,7 +1,14 @@
 <div>
-	<h2>Post #<%= @post.id %></h2>
+	<h2>post #<%= @post.id %></h2>
 	<div class="col-md-6 col-sm-8 col-xs-12 well">
 		<dl>
+			<dt>
+				<span>Hours worked:</span>
+			</dt>
+			<dd>
+				<%= @post.daily_hours %>
+			</dd>
+
 			<dt>
 				<span>RATIONALE:</span>
 			</dt>
