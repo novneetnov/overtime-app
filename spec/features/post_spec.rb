@@ -31,7 +31,7 @@ describe 'Post' do
 
 		it 'has a scope that Users can see only their own posts' do
 			visit posts_path
-		 	expect(page).to_not have_content(post_with_another_user.rationale)
+		 	expect(page).to_not have_content(post_with_another_user.work_performed)
 		end
 	end
 
@@ -42,7 +42,7 @@ describe 'Post' do
 			login_as(employee, scope: :user)
 			visit root_path
 			within "ul.nav" do
-				click_link("Request Overtime")
+				click_link("Submit Hours")
 			end
 			expect(current_path).to eq new_post_path
 		end
@@ -58,17 +58,17 @@ describe 'Post' do
 
 		it 'can be created from new form page' do
 			fill_in 'post[date]', with: Date.today
-			fill_in 'post[rationale]', with: "Some Rationale"
+			fill_in 'post[work_performed]', with: "Some Rationale"
 			fill_in 'post[daily_hours]', with: 4.5
 			expect{ click_on 'Create' }.to change(Post, :count).by 1
 		end
 
 		it 'will have a user associated with it' do
 			fill_in 'post[date]', with: Date.today
-			fill_in 'post[rationale]', with: "User Association"
+			fill_in 'post[work_performed]', with: "User Association"
 			fill_in 'post[daily_hours]', with: 4.5
 			click_on 'Create'
-			expect(user.posts.last.rationale).to eq("User Association")
+			expect(user.posts.last.work_performed).to eq("User Association")
 		end
 	end
 
@@ -77,7 +77,7 @@ describe 'Post' do
 		it 'can be edited' do
 			visit edit_post_path(post)
 			fill_in 'post[date]', with: Date.today
-			fill_in 'post[rationale]', with: "Edited Rationale"
+			fill_in 'post[work_performed]', with: "Edited Rationale"
 			click_on 'Update'
 			expect(page).to have_content("Edited Rationale")
 		end
@@ -98,7 +98,7 @@ describe 'Post' do
 				find('a[data-method="delete"]').click
 			end
 			expect(current_path).to eq posts_path
-			expect(page).to_not have_content(post.rationale)
+			expect(page).to_not have_content(post.work_performed)
 		end
 	end
 

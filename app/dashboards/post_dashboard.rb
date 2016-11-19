@@ -12,7 +12,7 @@ class PostDashboard < Administrate::BaseDashboard
     id: Field::Number,
     date: Field::DateTime,
 		daily_hours: Field::Number,
-    rationale: Field::Text.with_options(searchable: true),
+    work_performed: Field::Text.with_options(searchable: true),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
 		status: Field::Select.with_options(
@@ -30,7 +30,7 @@ class PostDashboard < Administrate::BaseDashboard
     :user,
     :date,
 		:daily_hours,
-    :rationale,
+    :work_performed,
 		:status,
   ].freeze
 
@@ -41,7 +41,7 @@ class PostDashboard < Administrate::BaseDashboard
 		:status,
     :date,
 		:daily_hours,
-    :rationale,
+    :work_performed,
     :created_at,
     :updated_at,
   ].freeze
@@ -53,7 +53,7 @@ class PostDashboard < Administrate::BaseDashboard
     :user,
     :date,
 		:daily_hours,
-    :rationale,
+    :work_performed,
 		:status,
   ].freeze
 

@@ -42,8 +42,8 @@ puts "4 AuditLogs created."
 3.times do |n|
 	Post.create!(
 		date: Date.today - (7*n+7).days, 
-		#rationale: "#{post} rationale content", 
-		rationale: "Ipsum praesentium adipisci dolore tenetur sint alias maiores molestiae sequi nam? Sint nemo architecto cumque reprehenderit natus. Esse nobis quidem vero dignissimos delectus. Earum ab error fugit esse id eum!",
+		#work_performed: "#{post} rationale content", 
+		work_performed: "Ipsum praesentium adipisci dolore tenetur sint alias maiores molestiae sequi nam? Sint nemo architecto cumque reprehenderit natus. Esse nobis quidem vero dignissimos delectus. Earum ab error fugit esse id eum!",
 		user_id: @employee.id, 
 		daily_hours: 2.5
 	)
