@@ -1,4 +1,5 @@
 Post.delete_all
+AuditLog.delete_all
 User.delete_all
 
 #Post.skip_callback(:save, :after, :update_audit_log)
