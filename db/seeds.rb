@@ -8,8 +8,8 @@ User.delete_all
 	email: "novneet@iith.ac.in", 
 	password: "password", 
 	password_confirmation: "password", 
-	first_name: "Jon", 
-	last_name: "Snow",
+	first_name: "Adam", 
+	last_name: "Smith",
 	phone: "7894418310",
 	ssn: 1234,
 	company: "ABC"
@@ -30,8 +30,8 @@ puts "2 User created"
 	email: "novneet346iith@gmail.com", 
 	password: "password", 
 	password_confirmation: "password", 
-	first_name: "Jon", 
-	last_name: "Snow",
+	first_name: "Moderator", 
+	last_name: "Guy",
 	phone: "9438405083",
 	ssn: 1234,
 	company: "ABC"
@@ -40,8 +40,8 @@ puts "2 User created"
 	email: "admin@example.com", 
 	password: "password", 
 	password_confirmation: "password", 
-	first_name: "Jon", 
-	last_name: "Snow",
+	first_name: "Admin", 
+	last_name: "Guy",
 	phone: "1234567890",
 	ssn: 1234,
 	company: "ABC"
